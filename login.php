@@ -13,17 +13,33 @@
 	<body>
 	<?php
 		$msg = '';
-		$user = 'admin';
-		$pass = 'pass';
 		//So long as the form items aren't empty
 		if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
 			//Items are correct
-			if($_POST['username'] == $user && $_POST['password'] == $pass) {
+			if($_POST['username'] == Login_Tools::admin_username && $_POST['password'] == Login_Tools::admin_password) {
 				//Set session parameters
 				$_SESSION['valid'] = true;
 				$_SESSION['timeout'] = time();
-				$_SESSION['username'] = 'Person';
-				
+				$_SESSION['username'] = 'Admin';
+	
+				header("Location: landing.php");
+			}
+			
+			elseif($_POST['username'] == Login_Tools::ranger_username && $_POST['password'] == Login_Tools::ranger_password) {
+				//Set session parameters
+				$_SESSION['valid'] = true;
+				$_SESSION['timeout'] = time();
+				$_SESSION['username'] = 'Ranger';
+	
+				header("Location: landing.php");
+			}
+			
+			elseif($_POST['username'] == Login_Tools::scientist_username && $_POST['password'] == Login_Tools::scientist_password) {
+				//Set session parameters
+				$_SESSION['valid'] = true;
+				$_SESSION['timeout'] = time();
+				$_SESSION['username'] = 'Scientist';
+	
 				header("Location: landing.php");
 			}
 			//Incorrect
@@ -40,7 +56,7 @@
 		<button type="submit" name="login">Login</button>
 	</form>
 	<?php
-		SessionData($_SESSION);
+		Login_Tools::SessionData($_SESSION);
 	?>
 	</body>
 </html>

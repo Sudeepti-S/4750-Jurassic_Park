@@ -6,4 +6,5 @@
 	unset($_SESSION['valid']);
 	
 	echo 'Logged out';
+	header('Landing: login.php');
 ?>
