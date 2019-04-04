@@ -53,8 +53,8 @@
 		
 		//DB Logins. ALWAYS USE THE LOWER ACCESS LEVEL WHEN MULTIPLE USER TYPES CAN REACH THE PAGE.
 		//Login for Admin specific access.
-		public static function DBADMIN_Login($session) {
-			$db = new mysqli(Login_Tools::$host,Login_Tools::$login_admin,Login_Tools::login_pass,Login_Tools::$schema);
+		public static function DBADMIN_Login() {
+			$db = new mysqli(Login_Tools::$host,Login_Tools::$login_admin,Login_Tools::$login_pass,Login_Tools::$schema);
 			if($db->connect_errno){
 				echo("Failed to connect to Database");
 				$db->close();
@@ -64,8 +64,8 @@
 		}
 		
 		//Login for Ranger specific access.
-		public static function DBRANGER_Login($session) {
-			$db = new mysqli(Login_Tools::$host,Login_Tools::$login_ranger,Login_Tools::login_pass,Login_Tools::$schema);
+		public static function DBRANGER_Login() {
+			$db = new mysqli(Login_Tools::$host,Login_Tools::$login_ranger,Login_Tools::$login_pass,Login_Tools::$schema);
 			if($db->connect_errno){
 				echo("Failed to connect to Database");
 				$db->close();
@@ -75,8 +75,8 @@
 		}
 		
 		//Login for Scientist specific access.
-		public static function DBSCIENCE_Login($session) {
-			$db = new mysqli(Login_Tools::$host,Login_Tools::$login_science,Login_Tools::login_pass,Login_Tools::$schema);
+		public static function DBSCIENCE_Login() {
+			$db = new mysqli(Login_Tools::$host,Login_Tools::$login_science,Login_Tools::$login_pass,Login_Tools::$schema);
 			if($db->connect_errno){
 				echo("Failed to connect to Database");
 				$db->close();

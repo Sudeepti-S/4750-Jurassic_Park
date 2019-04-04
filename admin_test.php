@@ -12,5 +12,9 @@
 	</head>
 	<body>
 	<h1>Scientists should not be able to be here.</h1>
+	<form action="admin_print.php" method="post">
+		<input type="hidden" name="pinfo" value="1">
+		<p><input type="Submit" value="Grab Info"></p>
+	</form>
 	</body>
 </html>
