@@ -13,14 +13,14 @@
 		private static $users = array('Admin','Ranger','Scientist');
 		
 		//Login data. 
-		public const admin_username = 'admin';
-		public const admin_password = 'pass';
+		const admin_username = 'admin';
+		const admin_password = 'pass';
 		
-		public const ranger_username = 'ranger';
-		public const ranger_password = 'pass';
+		const ranger_username = 'ranger';
+		const ranger_password = 'pass';
 		
-		public const scientist_username = 'scientist';
-		public const scientist_password = 'pass';
+		const scientist_username = 'scientist';
+		const scientist_password = 'pass';
 		
 		
 		// Use this like a decorator for pages that require a login.
