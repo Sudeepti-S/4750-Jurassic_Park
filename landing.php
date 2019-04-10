@@ -12,5 +12,13 @@
 	</head>
 	<body>
 	<h1>WELCOME</h1>
+	</br>
+	<a href="dinosaurs.php">Dinosaurs</a>
+	</br>
+	<a href="rangers.php">Rangers</a>
+	</br>
+	<a href="export.php">JSON Export</a>
+	</br>
+	<a href="logout.php">Logout</a>
 	</body>
 </html>
