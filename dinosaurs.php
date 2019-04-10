@@ -22,7 +22,8 @@
 				searchDynamic: $( "#dynamic" ).val(),
 				searchCaptive: $( "#captive" ).val(),
 				searchAge: $( "#age" ).val(),
-				searchHostility: $( "#hostility" ).val()
+				searchHostility: $( "#hostility" ).val(),
+				searchDiet: $( "#diet" ).val()
 			},
 			success: function(data){
 				$('#LastNresult').html(data);      
@@ -34,9 +35,9 @@
 </head>
 <body>
 	<h1>DINOSAURS</h1>
-	<p><input class="xlarge" id="chip" type="search" size="30" placeholder="ChipID"/></p>
-	<p><input class="xlarge" id="age" type="search" size="30" placeholder="Age"/></p>
-	<p><input class="xlarge" id="species" type="search" size="30" placeholder="Species"/></p>
+	<p>Chip_ID: <input class="xlarge" id="chip" type="search" size="30" placeholder="ChipID"/></p>
+	<p>Age: <input class="xlarge" id="age" type="search" size="30" placeholder="Age"/></p>
+	<p>Species: <input class="xlarge" id="species" type="search" size="30" placeholder="Species"/></p>
 	<p>Social Dynamic: <select id="dynamic">
 		<option value="%">Any</option>
 		<option value="Group">Group-based</option>
@@ -60,6 +61,13 @@
 		<option value="%">Any</option>
 		<option value="Hostile">Hostile</option>
 		<option value="Non-hostil">Non-Hostile</option>
+		</select>
+	</p>
+	<p>Diet: <select id="diet">
+		<option value="%">Any</option>
+		<option value="carnivore">Carnivore</option>
+		<option value="herbivore">Herbivore</option>
+		<option value="omnivore">Omnivore</option>
 		</select>
 	</p>
 	<p><input type="submit" id="sub" value="Search"/>
