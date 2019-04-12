@@ -16,7 +16,7 @@ if(isset($_GET['id'])){
 		$stmt->execute();
 		$stmt->bind_result($id, $phone_number, $first, $last, $age, $focus, $lab);
 		while($stmt->fetch()) {
-			echo ("Name: $first $last Age: $age Phone: $phone_number" );
+			echo ("Name: $first $last Age: $age Phone: $phone_number Focus: $focus Lab: $lab" );
 			echo ("</br>");
 		}
 		
@@ -28,7 +28,7 @@ if(isset($_GET['id'])){
 		$stmt->execute();
 		$stmt->bind_result($chip_id, $staff_id);
 		while($stmt->fetch()) {
-			echo ("Chip Id: $chip_id");
+			echo ("Chip Id: $chip_id Staff Id: $staff_id");
 			echo ("</br>");
 		}
 		
