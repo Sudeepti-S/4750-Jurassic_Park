@@ -170,7 +170,8 @@ if($stmt->prepare($query) or die(mysqli_error($db))) {
 		$stmt->bind_result($cid,$captivity,$species,$social,$health,$hostility,$diet,$age);
 		echo "<table border=1><th>Chip ID</th><th>Captivity State</th><th>Species</th><th>Social Dynamic</th><th>Health</th><th>Hostile?</th><th>Diet</th><th>Age</th>";
 		while($stmt->fetch()) {
-			echo "<tr><td>$cid</td><td>$captivity</td><td>$species</td><td>$social</td><td>$health</td><td>$hostility</td><td>$diet</td><td>$age</td></tr>";
+			$link = "<a href=\"editdinosaur.php?id=$cid\">$cid</a>";
+			echo "<tr><td>$link</td><td>$captivity</td><td>$species</td><td>$social</td><td>$health</td><td>$hostility</td><td>$diet</td><td>$age</td></tr>";
 		}
 		echo "</table>";
 	}	

@@ -35,6 +35,7 @@
 </head>
 <body>
 	<h1>DINOSAURS</h1>
+	<a href="landing.php">Go Back</a>
 	</br><a href="createdinosaur.php">Add a new Dinosaur</a></br>
 	<p>Chip_ID: <input id="chip" type="search" placeholder="ChipID"/></p>
 	<p>Age: <input id="age" type="search" placeholder="Age"/></p>
