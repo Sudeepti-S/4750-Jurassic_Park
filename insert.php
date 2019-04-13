@@ -12,7 +12,7 @@ $db = Login_Tools::DBADMIN_Login();
 $stmt = $db->stmt_init();
 
 
-if(!isset($_POST['species']) OR !isset($_POST['social']) OR !isset($_POST['health']) OR !isset($_POST['hostility']) OR !isset($_POST['diet']) OR !isset($_POST['age']) OR !isset($_POST['scientist'])) {
+if(!isset($_POST['species']) OR !isset($_POST['social']) OR !isset($_POST['health']) OR !isset($_POST['hostility']) OR !isset($_POST['diet']) OR !isset($_POST['age']) OR !isset($_POST['scientist']) OR $_POST['species'] == "" OR $_POST['age'] == 0) {
 	echo "Bad data. No records added";
 }
 else {
