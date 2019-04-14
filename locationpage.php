@@ -23,10 +23,10 @@ if(isset($_GET['id'])){
 		//$stmt->close();
 	}
 	
-	if($stmt->prepare("select * from Lives_in where location_number = ?") or die(mysqli_error($db))) {
+	if($stmt->prepare("select chip_id from Lives_in where location_number = ?") or die(mysqli_error($db))) {
 		$stmt->bind_param("i", $_GET['id']);
 		$stmt->execute();
-		//$stmt->bind_result($chip_id);
+		$stmt->bind_result($chip_id);
 		while($stmt->fetch()) {
 			echo ("Chip Id: $chip_id");
 			echo ("</br>");
