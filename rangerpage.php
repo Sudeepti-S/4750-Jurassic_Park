@@ -1,4 +1,5 @@
 <!--LOGIN HEADER-->
+<link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <?php
 	include("login_tools.php");
 	session_start();
@@ -17,7 +18,11 @@ if(isset($_GET['id'])){
 		$stmt->execute();
 		$stmt->bind_result($id, $phone_number, $first, $last, $age);
 		while($stmt->fetch()) {
-			echo ("Name: $first $last Age: $age Phone: $phone_number");
+			echo ("<div align='center'>Name: $first $last</div>");
+			echo ("</br>");
+			echo ("<div align='center'>Age: $age</div>");
+			echo ("</br>");
+			echo ("<div align='center'>Phone: $phone_number</div>");
 			echo ("</br>");
 		}
 		
@@ -28,7 +33,7 @@ if(isset($_GET['id'])){
 		$stmt->execute();
 		$stmt->bind_result($location_number, $staff_id);
 		while($stmt->fetch()) {
-			echo ("Location: $location_number");
+			echo ("<div align='center'>Location: $location_number</div>");
 			echo ("</br>");
 		}
 		
@@ -40,7 +45,7 @@ if(isset($_GET['id'])){
 		$stmt->execute();
 		$stmt->bind_result($chip_id, $staff_id);
 		while($stmt->fetch()) {
-			echo ("Chip Id: $chip_id");
+			echo ("<div align='center'>Chip Id: $chip_id</div>");
 			echo ("</br>");
 		}
 		

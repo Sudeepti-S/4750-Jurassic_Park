@@ -13,7 +13,7 @@
 		<title> LOGIN </title>
 		<style>
 		body{
-			background-image: url("loginbg.jpg");
+			background-image: url("login2.jpg");
 			height: 100%;
 			background-position: center;
 			background-repeat: no-repeat;

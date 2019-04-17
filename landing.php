@@ -1,4 +1,5 @@
 <!--LOGIN HEADER-->
+<link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <?php
 	include("login_tools.php");
 	session_start();
@@ -11,20 +12,20 @@
 		<title>WELCOME</title>
 	</head>
 	<body>
-	<h1>WELCOME</h1>
+	<center><h1>WELCOME</h1></center>
 	</br>
-	<a href="dinosaurs.php">Dinosaurs</a>
+	<center><a href="dinosaurs.php"><font color=white>Dinosaurs</font></a></center>
 	</br>
-	<a href="rangers.php">Rangers</a>
+	<center><a href="rangers.php"><font color=white>Rangers</font></a><center>
 	</br>
-	<a href="scientist.php">Scientists</a>
+	<center><a href="scientist.php"><font color=white>Scientists</font></a></center>
 	</br>
-	<a href="location.php">Locations</a>
+	<center><a href="location.php"><font color=white>Locations</font></a></center>
 	</br>
-	<a href="visitor.php">Visitors</a>
+	<center><a href="visitor.php"><font color=white>Visitors</font></a></center>
 	</br>
-	<a href="export.php">JSON Export</a>
+	<center><a href="export.php"><font color=white>JSON Export</font></a></center>
 	</br>
-	<a href="logout.php">Logout</a>
+	<center><a href="logout.php"><font color=white>Logout</font></a></center>
 	</body>
 </html>

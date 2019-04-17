@@ -1,4 +1,5 @@
 <!--LOGIN HEADER-->
+<link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <?php
 	include("login_tools.php");
 	session_start();
@@ -11,11 +12,11 @@
 </head>
 <body>
 <?php
-echo("<h1>Emergencies</h1>");
+echo('<center><h1 style="color: red;">EMERGENCIES</h1></center></br>');
 
 $db = Login_Tools::DBADMIN_Login();
 $stmt = $db->stmt_init();
-echo("<h3>Escaped Dinosaurs</h3>");
+echo("<center><h3>Escaped Dinosaurs:</h3></center></br>");
 if($stmt->prepare("SELECT Dinosaur.chip_id,Lives_in.location_number, Dinosaur.hostility FROM Dinosaur NATURAL JOIN Lives_in WHERE Lives_in.location_number = 404") or die(mysqli_error($db))) {
 	$stmt->execute();
 	$stmt->bind_result($cid,$locnum,$hostility);
@@ -29,12 +30,13 @@ if($stmt->prepare("SELECT Dinosaur.chip_id,Lives_in.location_number, Dinosaur.ho
 
 	}	
 }
-echo("<h3>Attacks</h3>");
+echo("<center><h3>Attacks:</h3></center>");
 if($stmt->prepare("SELECT Visitor.name, Attacks.chip_id FROM Visitor NATURAL JOIN Attacks") or die(mysqli_error($db))) {
 	$stmt->execute();
 	$stmt->bind_result($name,$cid);
 	while($stmt->fetch()) {
-		echo("$name Attacked By Dinosaur ID: $cid");
+		echo("<div align='center'>$name Attacked By Dinosaur ID: $cid</div>");
+		echo("</br>");
 	}
 }
 

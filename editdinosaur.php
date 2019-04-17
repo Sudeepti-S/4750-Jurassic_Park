@@ -1,4 +1,5 @@
 <!--LOGIN HEADER-->
+<link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <?php
 	include("login_tools.php");
 	session_start();
@@ -9,7 +10,7 @@
 
 <html> 
 <body>
-<h1> EDIT DINOSAUR INFORMATION</h1>
+<center><h1> EDIT DINOSAUR INFORMATION</h1></center></br>
 <form action="edit.php" method="post">
 <?php 
 $db = Login_Tools::DBADMIN_Login();
@@ -40,7 +41,7 @@ if(isset($_GET['id'])){
 			echo("<p><input type=\"submit\" value=\"Update\"></p>");
 		}
 	}
-	echo ("<a href=\"dinosaurs.php\">Go Back</a>");
+	echo ("<a href=\"dinosaurs.php\"><font color=white>Go Back</font></a>");
 	$stmt->close();
 }
 $db->close();

@@ -1,4 +1,5 @@
 <!--LOGIN HEADER-->
+<link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <?php
 	include("login_tools.php");
 	session_start();
@@ -14,7 +15,7 @@ if($stmt->prepare("select * from Location") or die(mysqli_error($db))) {
 	$stmt->execute();
 	$stmt->bind_result($location_number,$desc);
 	while($stmt->fetch()) {
-		echo ("<a href = 'locationpage.php?id=$location_number'> $location_number $desc </a>");
+		echo ("<a href = 'locationpage.php?id=$location_number'> <font color=white>$location_number $desc</font> </a>");
 		echo ("</br>");
 	}
 	

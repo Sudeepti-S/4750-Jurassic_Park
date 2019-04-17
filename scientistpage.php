@@ -17,7 +17,15 @@ if(isset($_GET['id'])){
 		$stmt->execute();
 		$stmt->bind_result($id, $phone_number, $first, $last, $age, $focus, $lab);
 		while($stmt->fetch()) {
-			echo ("Name: $first $last Age: $age Phone: $phone_number Focus: $focus Lab: $lab" );
+			echo ("<div>Name: $first $last</div>" );
+			echo ("</br>");
+			echo ("<div>Age: $age</div>" );
+			echo ("</br>");
+			echo ("<div>Phone: $phone_number</div>" );
+			echo ("</br>");
+			echo ("<div>Focus: $focus</div>" );
+			echo ("</br>");
+			echo ("<div>Lab: $lab</div>" );
 			echo ("</br>");
 		}
 		
@@ -29,7 +37,7 @@ if(isset($_GET['id'])){
 		$stmt->execute();
 		$stmt->bind_result($chip_id, $staff_id);
 		while($stmt->fetch()) {
-			echo ("Chip Id: $chip_id Staff Id: $staff_id");
+			echo ("<div>Chip Id: $chip_id Staff Id: $staff_id</div>");
 			echo ("</br>");
 		}
 		

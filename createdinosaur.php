@@ -1,4 +1,5 @@
 <!--LOGIN HEADER-->
+<link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <?php
 	include("login_tools.php");
 	session_start();
@@ -12,8 +13,9 @@
 	<title>DINOSAUR INSERTION TOOL</title>
 </head>
 <body>
-<h1>ADD A NEW DINOSAUR</h1>
-<p>You MUST include the scientist who bred the dinosaur.</p>
+<center><h1>ADD A NEW DINOSAUR</h1></center>
+<center><p>You MUST include the scientist who bred the dinosaur.</p></center>
+</br>
 <form action="insert.php" method="post">
 <p>Species: <input type="text" name="species"></p>
 

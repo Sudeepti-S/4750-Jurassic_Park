@@ -1,4 +1,5 @@
 <!--LOGIN HEADER-->
+<link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <?php
 	include("login_tools.php");
 	session_start();
@@ -7,6 +8,9 @@
 <!--END LOGIN HEADER-->
 <html>
 <head>
+	<style>
+
+	</style>
     <script src="js/jquery-1.6.2.min.js" type="text/javascript"></script> 
     <script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
 	<title>DINOSAUR SEARCH ENGINE</title>
@@ -35,8 +39,8 @@
 </head>
 <body>
 	<h1>DINOSAURS</h1>
-	<a href="landing.php">Go Back</a>
-	</br><a href="createdinosaur.php">Add a new Dinosaur</a></br>
+	<a href="landing.php"><font color=white>Go Back</font></a>
+	</br><a href="createdinosaur.php"><font color=white>Add a new Dinosaur</font></a></br>
 	<p>Chip_ID: <input id="chip" type="search" placeholder="ChipID"/></p>
 	<p>Age: <input id="age" type="search" placeholder="Age"/></p>
 	<p>Species: <input id="species" type="search" placeholder="Species"/></p>
