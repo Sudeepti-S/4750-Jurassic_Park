@@ -35,9 +35,11 @@
 </head>
 <body>
 	<h1>DINOSAURS</h1>
-	<p>Chip_ID: <input class="xlarge" id="chip" type="search" size="30" placeholder="ChipID"/></p>
-	<p>Age: <input class="xlarge" id="age" type="search" size="30" placeholder="Age"/></p>
-	<p>Species: <input class="xlarge" id="species" type="search" size="30" placeholder="Species"/></p>
+	<a href="landing.php">Go Back</a>
+	</br><a href="createdinosaur.php">Add a new Dinosaur</a></br>
+	<p>Chip_ID: <input id="chip" type="search" placeholder="ChipID"/></p>
+	<p>Age: <input id="age" type="search" placeholder="Age"/></p>
+	<p>Species: <input id="species" type="search" placeholder="Species"/></p>
 	<p>Social Dynamic: <select id="dynamic">
 		<option value="%">Any</option>
 		<option value="Group">Group-based</option>

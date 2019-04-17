@@ -3,7 +3,7 @@
 	include("login_tools.php");
 	session_start();
 	Login_Tools::CheckLogin($_SESSION);
-	Login_Tools::RestrictAccess($_SESSION['username'],'Admin','Ranger');
+	Login_Tools::RestrictAccess($_SESSION['username'],'Admin');
 ?>
 <!--END LOGIN HEADER-->
 
