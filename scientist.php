@@ -15,7 +15,7 @@ if($stmt->prepare("select * from Scientist") or die(mysqli_error($db))) {
 	$stmt->execute();
 	$stmt->bind_result($id,$phone,$first,$last,$age, $focus,$lab);
 	while($stmt->fetch()) {
-		echo ("<a href = 'scientistpage.php?id=$id'> $first $last </a>");
+		echo ("<a href = 'scientistpage.php?id=$id'> <font color=white> $first $last</font> </a>");
 		echo ("</br>");
 	}
 	
