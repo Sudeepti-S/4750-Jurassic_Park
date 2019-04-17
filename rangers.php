@@ -1,4 +1,5 @@
 <!--LOGIN HEADER-->
+<link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <?php
 	include("login_tools.php");
 	session_start();
@@ -15,7 +16,7 @@ if($stmt->prepare("select staff_id, first_name, last_name from Ranger") or die(m
 	$stmt->execute();
 	$stmt->bind_result($id,$first,$last);
 	while($stmt->fetch()) {
-		echo ("<a href = 'rangerpage.php?id=$id'> $first $last </a>");
+		echo ("<a href = 'rangerpage.php?id=$id'> <font color=white> $first $last</font> </a>");
 		echo ("</br>");
 	}
 	

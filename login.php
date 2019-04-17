@@ -1,4 +1,6 @@
 <!--From https://www.tutorialspoint.com/php/php_login_example.htm -->
+<!-- <link rel="stylesheet" href="main.css" /> -->
+
 <?php
 	include("login_tools.php");
 	ob_start();
@@ -9,6 +11,20 @@
 <html>
 	<head>
 		<title> LOGIN </title>
+		<style>
+		body{
+			background-image: url("loginbg.jpg");
+			height: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: flex;
+		}
+		form{
+			text-align: center;
+			margin:auto;
+		}
+		</style>
 	</head>
 	<body>
 	<?php
@@ -50,13 +66,11 @@
 	?>
 	
 	<form action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
-		<h4>MESSAGE <?php echo $msg;?></h4>
+		<h1 style="color: white">Sign In</h1>
+		<h4><?php echo $msg;?></h4>
 		<input type="text" name="username" placeholder = "USERNAME" required autofocus>
 		<input type="password" name="password" required>
 		<button type="submit" name="login">Login</button>
 	</form>
-	<?php
-		Login_Tools::SessionData($_SESSION);
-	?>
 	</body>
 </html>

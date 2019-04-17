@@ -1,0 +1,18 @@
+body{
+	background-color: black;
+	background-image: url("JP1_castcrew_preview.jpg"); 
+	/* background-size: cover; */
+	/* display: flex; */
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+}
+
+form{
+	color: white;
+	text-align: center;	
+	margin: auto;
+	
+}
