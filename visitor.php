@@ -1,4 +1,5 @@
-<!--LOGIN HEADER-->
+<!--LOGIN HEADER
+<link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <?php
 	include("login_tools.php");
 	session_start();
