@@ -1,5 +1,6 @@
 <!--LOGIN HEADER-->
 <link type="text/css" rel="stylesheet" href="styles/main.css" /> 
+<center><a href = 'landing.php'> <font color=white> Back to home</font> </a></center>
 <?php
 	include("login_tools.php");
 	session_start();
@@ -15,10 +16,7 @@ if($stmt->prepare("select * from Scientist") or die(mysqli_error($db))) {
 	$stmt->execute();
 	$stmt->bind_result($id,$phone,$first,$last,$age, $focus,$lab);
 	while($stmt->fetch()) {
-<<<<<<< HEAD
 		echo ("<a href = 'scientistpage.php?id=$id'> <font color=white> $first $last </font> </a>");
-=======
-		echo ("<a href = 'scientistpage.php?id=$id'> <font color=white> $first $last</font> </a>");
 		echo ("</br>");
 	}
 	

@@ -1,5 +1,6 @@
 <!--LOGIN HEADER-->
 <link type="text/css" rel="stylesheet" href="styles/main.css" /> 
+<center><a href = 'landing.php'> <font color=white> Back to home</font> </a></center>
 <?php
 	include("login_tools.php");
 	session_start();

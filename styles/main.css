@@ -1,7 +1,7 @@
 
 body{
 	background-color: black;
-	font-family: 'Harmattan', sans-serif;
+	font-family: Palatino;
 	background-image: url("JP1_castcrew_preview.jpg"); 
 	/* background-size: cover; */
 	/* display: flex; */
@@ -10,6 +10,10 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
+}
+
+div{
+	color: green;
 }
 
 form{

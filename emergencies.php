@@ -1,5 +1,6 @@
 <!--LOGIN HEADER-->
 <link type="text/css" rel="stylesheet" href="styles/main.css" /> 
+<a href = 'landing.php'> <font color=white> Back to home</font> </a>
 <?php
 	include("login_tools.php");
 	session_start();
@@ -11,18 +12,11 @@
 <head>
 </head>
 <body>
-<h1>Emergencies</h1>
-<h3>Add New Attack</h3>
+<center><h1 style="color:red">EMERGENCIES</h1></center>
+<center><h3>Add New Attack</h3></center>
 <?php
-echo('<center><h1 style="color: red;">EMERGENCIES</h1></center></br>');
-
 $db = Login_Tools::DBADMIN_Login();
 $stmt = $db->stmt_init();
-echo("<center><h3>Escaped Dinosaurs:</h3></center></br>");
-$db = Login_Tools::DBADMIN_Login();
-$stmt = $db->stmt_init();
-
-
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(!isset($_POST['chip']) || !isset($_POST['visitor'])) {
 		echo("<p>Bad parameters</p>");
@@ -35,9 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 	}
 }
-
 echo("<form action=\"\" method=\"post\">");
-
 echo("<p>Chip ID: <select name=\"chip\"></p>");
 if($stmt->prepare("SELECT chip_id, species FROM Dinosaur") or die(mysqli_error($db))) {
 	$stmt->execute();
@@ -58,19 +50,17 @@ if($stmt->prepare("SELECT visitor_number, name FROM Visitor WHERE visitor_number
 echo("</select>");
 echo("<p><input type=\"submit\" value=\"Insert\"></p>");
 echo("</form>");
-
-echo("<h3>Escaped Dinosaurs</h3>");
+echo("<center><h3>Escaped Dinosaurs:</h3></center>");
 if($stmt->prepare("SELECT Dinosaur.chip_id,Lives_in.location_number, Dinosaur.hostility FROM Dinosaur NATURAL JOIN Lives_in WHERE Lives_in.location_number = 404") or die(mysqli_error($db))) {
 	$stmt->execute();
 	$stmt->bind_result($cid,$locnum,$hostility);
 	while($stmt->fetch()) {
 		if($hostility == "Hostile"){
-			echo("ID: $cid | HOSTILE");			
+			echo("<center>ID: $cid | HOSTILE</center>");			
 		}
 		else {
-			echo("ID: $cid");
+			echo("<center>ID: $cid</center>");
 		}
-
 	}	
 }
 echo("<center><h3>Attacks:</h3></center>");
@@ -78,16 +68,11 @@ if($stmt->prepare("SELECT Visitor.name, Attacks.chip_id FROM Visitor NATURAL JOI
 	$stmt->execute();
 	$stmt->bind_result($name,$cid);
 	while($stmt->fetch()) {
-		echo("<div align='center'>$name Attacked By Dinosaur ID: $cid</div>");
-		echo("</br>");
-=======
-		echo("<li>$name Attacked By Dinosaur ID: $cid</li>");
+		echo("<center><li>$name Attacked By Dinosaur ID: $cid</li></center>");
 	}
 }
-
 $stmt->close();
 $db->close();
-
 ?>
 </body>
 </html>
