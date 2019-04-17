@@ -16,7 +16,7 @@ if($stmt->prepare("select * from Visitor") or die(mysqli_error($db))) {
 	$stmt->execute();
 	$stmt->bind_result($num, $age, $name, $allowed);
 	while($stmt->fetch()) {
-		echo ("<a href = 'visitorpage.php?id=$num'> $name </a>");
+		echo ("<a href = 'visitorpage.php?id=$id'> <font color=white> $first $last</font> </a>");
 		echo ("</br>");
 	}
 	
