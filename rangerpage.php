@@ -1,7 +1,8 @@
 <!--LOGIN HEADER-->
 <link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
-<a href = 'landing.php'> <font color=white> Back to home</font> </a>
+<center><a href = 'landing.php'> <font color=white> Back to home</font> </a></center>
+<center><a href = 'rangers.php'> <font color=white> View all rangers</font> </a></center>
 <?php
 	include("login_tools.php");
 	session_start();
@@ -21,11 +22,15 @@ if(isset($_GET['id'])){
 		$stmt->bind_result($id, $phone_number, $first, $last, $age);
 		while($stmt->fetch()) {
 			echo "<font size='5' face='Signika'>";
-			echo ("<div align='center'>Name: $first $last</div>");
 			echo ("</br>");
-			echo ("<div align='center'>Age: $age</div>");
+			echo ("Name: $first $last");
 			echo ("</br>");
-			echo ("<div align='center'>Phone: $phone_number</div>");
+			echo ("</br>");
+			echo ("Age: $age");
+			echo ("</br>");
+			echo ("</br>");
+			echo ("Phone: $phone_number");
+			echo ("</br>");
 			echo ("</br>");
 			echo "</font>";
 		}
@@ -38,7 +43,8 @@ if(isset($_GET['id'])){
 		$stmt->bind_result($location_number, $staff_id);
 		while($stmt->fetch()) {
 			echo "<font size='5' face='Signika'>";
-			echo ("<div align='center'>Location: $location_number</div>");
+			echo ("Location: $location_number");
+			echo ("</br>");
 			echo ("</br>");
 			echo "</font>";
 		}
@@ -52,7 +58,8 @@ if(isset($_GET['id'])){
 		$stmt->bind_result($chip_id, $staff_id);
 		while($stmt->fetch()) {
 			echo "<font size='5' face='Signika'>";
-			echo ("<div align='center'>Chip Id: $chip_id</div>");
+			echo ("Chip Id: $chip_id");
+			echo ("</br>");
 			echo ("</br>");
 			echo "</font>";
 		}
