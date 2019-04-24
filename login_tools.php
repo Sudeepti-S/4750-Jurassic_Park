@@ -106,7 +106,7 @@
 				return true;
 			}
 			else { //User is not allowed. Redirect to landing.
-				//header("Location: landing.php");
+				header("Location: landing.php");
 			}
 		}		
 	}
