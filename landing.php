@@ -28,6 +28,8 @@
 	</br>
 	<center><a href="export.php"><font color=white>JSON Export</font></a></center>
 	</br>
+	<center><a href="emergencies.php"><font color=white>Emergencies</font></a></center>
+	</br>
 	<center><a href="logout.php"><font color=white>Logout</font></a></center>
 	</body>
 </html>

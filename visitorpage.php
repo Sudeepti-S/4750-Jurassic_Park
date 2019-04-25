@@ -1,6 +1,7 @@
 <!--LOGIN HEADER-->
 <link type="text/css" rel="stylesheet" href="styles/main.css" /> 
 <center><a href = 'landing.php'> <font color=white> Back to home</font> </a></center>
+<center><a href = 'visitor.php'> <font color=white> View all visitors</font> </a></center>
 <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
 <?php
 	include("login_tools.php");
@@ -22,11 +23,15 @@ if(isset($_GET['id'])){
 		$stmt->bind_result($visitor_number, $age, $name, $allowed);
 		while($stmt->fetch()) {
 			echo "<font size='5' face='Signika'>";
+			echo ("</br>");
 			echo ("Visitor Name: $name");
+			echo ("</br>");
 			echo ("</br>");
 			echo ("Number: $visitor_number");
 			echo ("</br>");
+			echo ("</br>");
 			echo ("Age: $age");
+			echo ("</br>");
 			echo ("</br>");
 			echo ("Allowed: $allowed");
 			echo ("</br>");
