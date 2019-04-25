@@ -3,12 +3,12 @@
 	include("login_tools.php");
 	session_start();
 	Login_Tools::CheckLogin($_SESSION);
-	Login_Tools::RestrictAccess($_SESSION['username'],'Admin','Scientist');
+	Login_Tools::RestrictAccess($_SESSION['username'],'Admin','Ranger');
 ?>
 <!--END LOGIN HEADER-->
 
 <?php
-$db = Login_Tools::DBADMIN_Login();
+$db = Login_Tools::DBRANGER_Login();
 $stmt=$db->stmt_init();
 if(!isset($_POST['id']) OR !isset($_POST['captivity']) OR !isset($_POST['age']) OR !isset($_POST['health'])) {
 	echo("Bad data. No update");

@@ -48,7 +48,7 @@
 <p>Scientist: <select name="scientist">
 	<?php
 	//Generate all the possible scientists to create info for.
-	$db = Login_Tools::DBADMIN_Login();
+	$db = Login_Tools::DBSCIENCE_Login();
 	$stmt = $db->stmt_init();
 
 	if($stmt->prepare("SELECT staff_id, first_name, last_name FROM Scientist") or die(mysqli_error($db))) {

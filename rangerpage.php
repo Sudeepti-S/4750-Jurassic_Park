@@ -11,7 +11,7 @@
 <!--END LOGIN HEADER-->
 
 <?php
-$db = Login_Tools::DBADMIN_Login();
+$db = Login_Tools::DBRANGER_Login();
 $stmt = $db->stmt_init();
 
 if(isset($_GET['id'])){
@@ -32,6 +32,9 @@ if(isset($_GET['id'])){
 		
 		//$stmt->close();
 	}
+	
+	echo ("<div align='center'><h1>Patrol Locations</h1></div>");
+	
 	if($stmt->prepare("select * from Patrols where staff_id = ?") or die(mysqli_error($db))) {
 		$stmt->bind_param("i", $_GET['id']);
 		$stmt->execute();
@@ -45,6 +48,8 @@ if(isset($_GET['id'])){
 		
 		//$stmt->close();
 	}
+	
+	echo ("<div align='center'><h1>Dinosaurs Cared For</h1></div>");
 	
 	if($stmt->prepare("select * from Cares_for where staff_id = ?") or die(mysqli_error($db))) {
 		$stmt->bind_param("i", $_GET['id']);

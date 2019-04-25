@@ -10,7 +10,7 @@
 <!--END LOGIN HEADER-->
 
 <?php
-$db = Login_Tools::DBADMIN_Login();
+$db = Login_Tools::DBSCIENCE_Login();
 $stmt = $db->stmt_init();
 if($stmt->prepare("select * from Scientist") or die(mysqli_error($db))) {
 	$stmt->execute();

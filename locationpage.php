@@ -30,6 +30,8 @@ if(isset($_GET['id'])){
 		//$stmt->close();
 	}
 	
+	echo ("<div align='center'><h1>Dinosaurs Living Here</h1></div>");
+	
 	if($stmt->prepare("select chip_id from Lives_in where location_number = ?") or die(mysqli_error($db))) {
 		$stmt->bind_param("i", $_GET['id']);
 		$stmt->execute();

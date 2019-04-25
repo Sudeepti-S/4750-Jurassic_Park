@@ -10,7 +10,7 @@
 <!--END LOGIN HEADER-->
 
 <?php
-$db = Login_Tools::DBADMIN_Login();
+$db = Login_Tools::DBRANGER_Login();
 $stmt = $db->stmt_init();
 
 if($stmt->prepare("select staff_id, first_name, last_name from Ranger") or die(mysqli_error($db))) {

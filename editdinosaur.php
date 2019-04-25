@@ -4,7 +4,7 @@
 	include("login_tools.php");
 	session_start();
 	Login_Tools::CheckLogin($_SESSION);
-	Login_Tools::RestrictAccess($_SESSION['username'],'Admin','Scientist');
+	Login_Tools::RestrictAccess($_SESSION['username'],'Admin','Ranger');
 ?>
 <!--END LOGIN HEADER-->
 
@@ -13,7 +13,7 @@
 <center><h1> EDIT DINOSAUR INFORMATION</h1></center></br>
 <form action="edit.php" method="post">
 <?php 
-$db = Login_Tools::DBADMIN_Login();
+$db = Login_Tools::DBRANGER_Login();
 $stmt = $db->stmt_init();
 if(isset($_GET['id'])){
 	if($stmt->prepare("SELECT * FROM Dinosaur WHERE chip_id = ?") or die(mysqli_error($db))) {
